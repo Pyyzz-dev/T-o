@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../Bootstrap/jquery/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap/css/bootstrap.min.css">
+    <title>Bài 1</title>
+    <style>
+        .active {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="baitapBuoi5byPhong">
+        <div class="container">
+            <div class="containerCon d-flex h-50 w-100 px-5">
+                <button id="btn1" style="height: 100px; width: 100px;" class="btnGeneral d-flex justify-content-center align-items-center px-5">
+                    <span style="font-size: 30px;">01</span>
+                </button>
+                <button id="btn2" style="height: 100px; width: 100px;" class="btnGeneral d-flex justify-content-center align-items-center px-5">
+                    <span style="font-size: 30px;">02</span>
+                </button>
+                <button id="btn3" style="height: 100px; width: 100px;" class="btnGeneral d-flex justify-content-center align-items-center px-5">
+                    <span style="font-size: 30px;">03</span>
+                </button>
+                <button id="btn4" style="height: 100px; width: 100px;" class="btnGeneral d-flex justify-content-center align-items-center px-5">
+                    <span style="font-size: 30px;">04</span>
+                </button>
+                <button id="btn5" style="height: 100px; width: 100px;" class="btnGeneral d-flex justify-content-center align-items-center px-5">
+                    <span style="font-size: 30px;">05</span>
+                </button>
+                <button id="btn6" style="height: 100px; width: 100px;" class="btnGeneral d-flex justify-content-center align-items-center px-5">
+                    <span style="font-size: 30px;">06</span>
+                </button>
+                <button id="btn7" style="height: 100px; width: 100px;" class="btnGeneral d-flex justify-content-center align-items-center px-5">
+                    <span style="font-size: 30px;">07</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(".btnGeneral").click(function() {
+        // $(".btnGeneral").removeClass("active");
+        $(this).toggleClass("active");
+    })
+</script>
+
+</html>

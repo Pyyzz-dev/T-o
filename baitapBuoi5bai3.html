@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../Bootstrap/jquery/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap/css/bootstrap.min.css">
+    <title>Bài 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        div {
+            border: 1px solid black;
+        }
+        
+        .tabCon {
+            height: 400px;
+            width: 50%;
+        }
+        
+        .tabCon .tabTitle {
+            height: 20%;
+            width: 100%;
+            background-color: dimgray;
+            border-radius: 5px;
+        }
+        
+        .tabCon .tabTitle .tabTitlecon1, .tabTitlecon2, .tabTitlecon3 {
+            height: 80%;
+            width: 150px;
+            background-color: darkgray;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .tabCon .textContent {
+            height: 80%;
+            width: 100%;
+        }
+        .tabCon .textContent .textPersonal{
+            height: 90%;
+            width: 100%;
+        }
+        .active{
+            background-color: aqua!important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab">
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="tabCon d-block">
+                <div class="tabTitle d-flex align-items-end">
+                    <div class="tabTitlecon1 general mr-2 d-flex justify-content-center align-items-center">
+                        <h6>Phong</h6>
+                        <p class="d-none">Phong</p>
+                    </div>
+                    <div class="tabTitlecon2 general mr-2 d-flex justify-content-center align-items-center">
+                        <h6>Sếp Nam</h6>
+                        <p class="d-none">Sếp Nam</p>
+                    </div>
+                    <div class="tabTitlecon3 general mr-2 d-flex justify-content-center align-items-center">
+                        <h6>Sếp Tuấn Anh</h6>
+                        <p class="d-none">Sếp Tuấn Anh</p>
+                    </div>
+                </div>
+                <div class="textContent d-flex align-items-end">
+                    <div class="textPersonal">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(".general").click(function(){
+        $(".general").removeClass("active");
+        $(this).toggleClass("active");
+    })
+    $(".tabTitlecon1").click(function(){
+        $(".textPersonal").empty();
+        $(".textPersonal").append($(".tabTitlecon1").children("p").text());
+    })
+    $(".tabTitlecon2").click(function(){
+        $(".textPersonal").empty();       
+        $(".textPersonal").append($(".tabTitlecon2").children("p").text());
+    })
+    $(".tabTitlecon3").click(function(){
+        $(".textPersonal").empty();
+        $(".textPersonal").append($(".tabTitlecon3").children("p").text());
+    })
+</script>
+</html>
