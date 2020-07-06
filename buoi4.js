@@ -133,3 +133,20 @@ function clockOnline(){
     }, 1000)
 }
 // clockOnline();
+
+var demoArray = [{
+    name:"Phong",
+    age: 11
+}, {
+    name: "Nam",
+    age: 28
+}]
+
+function demo1(){
+    for(var i = 0; i < demoArray.length; i++){
+        demoArray[1].name = "Tèo";
+    }
+    console.log(demoArray);
+}
+demo1();
+console.log(demoArray);

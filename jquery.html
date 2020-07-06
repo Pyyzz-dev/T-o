@@ -10,30 +10,17 @@
 </head>
 
 <body>
-    <div id="template">
-
-    </div>
-    <button id="btn">
-        Click
-    </button>
+    <input type="text" id="text1">
+    <input type="text" id="text2">
+    <button class="buttonClick">Tèo</button>
+    <p class="theP">Thẻ p</p>
 </body>
 <script>
-    $("#btn").click(function() {
-        var array = [{
-            name: "Phong",
-            class: "12A4",
-        }, {
-            name: "PA",
-            class: "12A1",
-        }]
-        for (var i = 0; i < array.length; i++) {
-            var template = `
-                    <div>
-                        <p>Name : ${array[i].name}</p>
-                        <p>Class : ${array[i].class}</p>
-                    </div>          
-                `
-            $("#template").append(template);
+    $(".buttonClick").click(function() {
+        if ($("#text1").val() == "" || $("#text2").val() == "") {
+            confirm("Email is blank. Please input");
+        } else {
+            $(".theP").html((parseInt($("#text1").val()) + parseInt($("#text2").val())));
         }
     })
 </script>
